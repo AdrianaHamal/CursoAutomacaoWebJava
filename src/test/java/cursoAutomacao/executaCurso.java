@@ -41,8 +41,8 @@ RegisterPage registerPage = new RegisterPage();
 		registerPage.validaLogo("original.png");
 		//registerPage.selecionaSkill("Java");
 		registerPage.selecionaSkills("Java");
-		
 		aguardaTempo(3000);
+		
 	
 	}	
 	 

@@ -9,8 +9,9 @@ import map.RegisterMap;
 public class RegisterPage {
 	RegisterMap registerMap = new RegisterMap();
 	
-    public void validaTitulo(String titulo) {
+    public RegisterPage validaTitulo(String titulo) {
     	Assert.assertEquals(titulo, registerMap.titulo.getText());
+    	return this;
      }
     
     public void setFirstName(String firstName) {
