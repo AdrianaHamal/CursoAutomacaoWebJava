@@ -17,5 +17,15 @@ public class RegisterMap {
 	public Element logo = new Element("a > img", ByValue.css);
 	public Element skills = new Element("Skills", ByValue.id);
 	public Element optSkills = new Element("#skills > option", ByValue.css);
+	public Element languages = new Element("msdd", ByValue.id);
+    public Element optLanguages = new Element("li.ng-scope > a", ByValue.css);
+    public Element country = new Element("countries", ByValue.id);
+    public Element countryDois = new Element("country", ByValue.id);
+    public Element year = new Element("yearbox", ByValue.id);
+    public Element month = new Element("//select[@ng-model='monthbox']", ByValue.xpath);
+	public Element day = new Element("daybox", ByValue.id);
+	public Element password = new Element("firstpassword", ByValue.id);
+	public Element confirmPassword = new Element("secondpassword", ByValue.id);
+	public Element submit = new Element("submitbtn", ByValue.id);
 	
 }

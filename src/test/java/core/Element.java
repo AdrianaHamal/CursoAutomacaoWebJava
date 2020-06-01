@@ -24,8 +24,8 @@ public class Element {
 
 	public Element (String map, ByValue _by, Integer _posicao) {
 		this.map = map;
-		by = _by;
-		posicao = _posicao;					
+		     by = _by;
+		     posicao = _posicao;					
 	}
 	
 	public WebElement getElement(By by) {
@@ -88,7 +88,7 @@ public class Element {
 		return elements;
 	}
 	
-	public void clickElementText(String valor) {
+	public void clickElementValue(String valor) {
 		for (WebElement webElement : createElements()) {
     		if (webElement.getAttribute("value").equals(valor)) {
     	    	webElement.click();
@@ -96,6 +96,17 @@ public class Element {
     		}
     	}
 	}
+	
+	public void clickElementText(String valor) {
+		for (WebElement webElement : createElements()) {
+    		if (webElement.getText().equals(valor)) {
+    	    	webElement.click();
+    	    	break;
+    		}
+		}
+		
+	}
+	
 	
 	public void click() {
 		createElement().click();
