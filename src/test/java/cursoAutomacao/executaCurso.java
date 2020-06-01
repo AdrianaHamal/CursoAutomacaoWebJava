@@ -3,6 +3,9 @@ package cursoAutomacao;
 
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -41,6 +44,19 @@ RegisterPage registerPage = new RegisterPage();
 		registerPage.validaLogo("original.png");
 		//registerPage.selecionaSkill("Java");
 		registerPage.selecionaSkills("Java");
+		
+		List<String> languages = new ArrayList<String>();
+		languages.add("Portuguese");
+		languages.add("English");
+		registerPage.selecionaLanguages(languages);
+		registerPage.selecionaCountry("Brazil");
+		registerPage.selecionaCountryDois("Australia");
+		registerPage.selecionaYear("1985");
+		registerPage.selecionaMonth("March");
+		registerPage.selecionaDay("22");
+		registerPage.setPassword("Teste123");
+		registerPage.setConfirmPassword("Teste123");
+		//registerPage.clickSubmit();
 		aguardaTempo(3000);
 		
 	

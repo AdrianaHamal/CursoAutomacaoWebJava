@@ -2,6 +2,8 @@ package page;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.List;
+
 import org.junit.Assert;
 
 import map.RegisterMap;
@@ -39,12 +41,12 @@ public class RegisterPage {
     }
     
     public void clickGenero(String genero) {
-    	registerMap.genero.clickElementText(genero);
+    	registerMap.genero.clickElementValue(genero);
     	
     }
     
     public void clickHobbie(String hobbie) {
-    	registerMap.hobbie.clickElementText(hobbie);
+    	registerMap.hobbie.clickElementValue(hobbie);
     	
     }
     
@@ -68,4 +70,50 @@ public class RegisterPage {
     	registerMap.optSkills.clickElementText(skill);
     	registerMap.skills.click();
     }
+    
+    public void selecionaLanguages(List<String> listLaguages) {
+    	registerMap.languages.click();
+    	for (String language : listLaguages) {
+    		registerMap.optLanguages.clickElementText(language);
+    	}
+    	
+    	registerMap.titulo.click();
+    }
+    
+    public void selecionaCountry(String country) {
+    	registerMap.country.selectText(country);
+    	
+    }
+    
+    public void selecionaCountryDois(String country) {
+    	registerMap.countryDois.selectText(country);
+    }
+   
+    public void selecionaYear(String year) {
+    	registerMap.year.selectText(year);
+    }
+    
+    public void selecionaMonth(String month) {
+    	registerMap.month.selectText(month);
+    }
+    
+    public void selecionaDay(String day) {
+    	registerMap.day.selectText(day);
+    }
+    
+    public void setPassword(String password) {
+    	registerMap.password.sendKeys(password);
+    }
+    
+    public void setConfirmPassword(String password) {
+    	registerMap.confirmPassword.sendKeys(password);
+    }
+    
+    public void clickSubmit() {
+    	registerMap.submit.click();
+    }
+    	
+
+    
+    
 }
