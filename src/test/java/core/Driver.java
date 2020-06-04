@@ -10,6 +10,17 @@ public class Driver {
 		return driver;
 	}
 
+	public static void aguardaTempo(long tempo) {
+	Thread.currentThread();
+	try {
+		Thread.sleep(tempo);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+}	
+	
+	
 	public static void setDriver(String url) {
 		System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
 		driver = new ChromeDriver();

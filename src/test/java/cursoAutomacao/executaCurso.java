@@ -57,21 +57,12 @@ RegisterPage registerPage = new RegisterPage();
 		registerPage.setPassword("Teste123");
 		registerPage.setConfirmPassword("Teste123");
 		//registerPage.clickSubmit();
-		aguardaTempo(3000);
+		Driver.aguardaTempo(3000);
 		
 	
 	}	
 	 
-		public void aguardaTempo(long tempo) {
-		Thread.currentThread();
-		try {
-			Thread.sleep(tempo);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}	
-		
+
 		 	
 	@Before
 	public void abreNavegador () {
